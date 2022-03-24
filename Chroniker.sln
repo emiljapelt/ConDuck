@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chroniker", "src\Chroniker.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedServices.Tests", "tests\TimedServices.Tests.csproj", "{5CFDA56D-B457-4949-9DE9-14A3AEAE1D68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tester", "tester\tester.csproj", "{3F8C1F59-685F-4D5E-B58B-788F14702841}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{5CFDA56D-B457-4949-9DE9-14A3AEAE1D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CFDA56D-B457-4949-9DE9-14A3AEAE1D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CFDA56D-B457-4949-9DE9-14A3AEAE1D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
