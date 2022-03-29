@@ -1,5 +1,5 @@
 
-namespace Chroniker
+namespace ConDuck
 {
     public class SplitIntervalService : TimedService
     {

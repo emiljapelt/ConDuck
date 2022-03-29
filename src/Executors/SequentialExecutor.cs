@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Chroniker
+namespace ConDuck
 {
     /// <summary>The <c>SequentialExecutor</c> executes all its routines sequentially, awaiting async routines before continuing. </summary> 
     public class SequentialExecutor : Executor

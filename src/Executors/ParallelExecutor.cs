@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Threading.Tasks;
 
-namespace Chroniker
+namespace ConDuck
 {
     /// <summary>The <c>ParallelExecutor</c> will use Parallel.ForEach to start execution of all routines at the same time.</summary>
     public class ParallelExecutor : Executor

@@ -1,6 +1,6 @@
 using System;
 
-namespace Chroniker
+namespace ConDuck
 {
     public class CustomTimedService : TimedService
     {

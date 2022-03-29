@@ -1,5 +1,5 @@
 ﻿
-using Chroniker;
+using ConDuck;
 
 var service = new CustomTimedService(
     null,

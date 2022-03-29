@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Chroniker
+namespace ConDuck
 {
     public class TimeOfDay
     {

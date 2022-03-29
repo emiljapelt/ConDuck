@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Chroniker
+namespace ConDuck
 {
     public abstract class TimedService
     {

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Chroniker
+namespace ConDuck
 {
     public interface IAsyncRoutine
     {

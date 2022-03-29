@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Chroniker
+namespace ConDuck
 {
     /// <summary>The <c>SplitExecutor</c> will start all asynchronous routines first, then run all synchronous routines, 
     /// and finally await all the asynchronous routines.</summary>

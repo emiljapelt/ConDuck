@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chroniker", "src\Chroniker.csproj", "{BB66227E-885E-48C9-8B41-A94C27A8E39F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConDuck", "src\ConDuck.csproj", "{BB66227E-885E-48C9-8B41-A94C27A8E39F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedServices.Tests", "tests\TimedServices.Tests.csproj", "{5CFDA56D-B457-4949-9DE9-14A3AEAE1D68}"
 EndProject

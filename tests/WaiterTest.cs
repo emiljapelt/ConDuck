@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-using Chroniker;
+using ConDuck;
 
-namespace Chroniker.Tests
+namespace ConDuck.Tests
 {
     public class WaiterTest
     {

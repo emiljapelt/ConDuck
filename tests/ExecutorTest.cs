@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Chroniker.Tests
+namespace ConDuck.Tests
 {
     public class ExecutorTest
     {

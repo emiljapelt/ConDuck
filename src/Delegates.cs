@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace Chroniker
+namespace ConDuck
 {
     public delegate void Routine();
     public delegate Task AsyncRoutine();
