@@ -1,12 +1,11 @@
 
-namespace ConDuck
+namespace ConDuck;
+
+public class SplitTODService : TimedService
 {
-    public class SplitTODService : TimedService
+    public SplitTODService(params (int, int)[] times)
     {
-        public SplitTODService(params (int, int)[] times)
-        {
-            PreWaiter = Delegates.GetTODWaiter(times);
-            Executor = new SplitExecutor();
-        }
+        PreWaiter = WaiterGallery.GetTODWaiter(times);
+        Executor = new SplitExecutor();
     }
 }

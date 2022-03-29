@@ -1,9 +1,7 @@
-using System.Threading.Tasks;
 
-namespace ConDuck
+namespace ConDuck;
+
+public interface IAsyncRoutine
 {
-    public interface IAsyncRoutine
-    {
-        public Task Execute();
-    }
+    public Task Execute();
 }

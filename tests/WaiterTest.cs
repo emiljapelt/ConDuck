@@ -14,7 +14,7 @@ namespace ConDuck.Tests
         [InlineData(15, TimeUnit.HOURS, 54000000)]
         public void IntervalWaiterTests(int amount, TimeUnit unit, int expected)
         {
-            Waiter w = Delegates.GetIntervalWaiter(amount, unit);
+            Waiter w = WaiterGallery.GetIntervalWaiter(amount, unit);
             Assert.Equal(w(), expected);
         }
     }

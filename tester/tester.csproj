@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Chroniker.csproj" />
+    <ProjectReference Include="..\src\ConDuck.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

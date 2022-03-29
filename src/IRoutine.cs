@@ -1,8 +1,7 @@
 
-namespace ConDuck
+namespace ConDuck;
+
+public interface IRoutine
 {
-    public interface IRoutine
-    {
-        public void Execute();
-    }
+    public void Execute();
 }

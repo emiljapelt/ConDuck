@@ -1,14 +1,11 @@
 ﻿
 using ConDuck;
+System.Console.WriteLine("Starting");
 
-var service = new CustomTimedService(
-    null,
-    new SequentialExecutor(),
-    Delegates.GetTODWaiter((11,26),(11,28),(11,27))
-);
+var task = TimedExecution.ExecuteAt(new TimeOfDay(10,8), () => {
+    Console.WriteLine("I DID IT!");
+});
 
-service.AddRoutine(() => System.Console.WriteLine(DateTime.Now));
+while(!task.IsCompleted);
 
-service.StartService();
-
-while(true);
+System.Console.WriteLine("Ending");

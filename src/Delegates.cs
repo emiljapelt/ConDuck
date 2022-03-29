@@ -1,48 +1,6 @@
-using System.Threading.Tasks;
-using System.Collections.Generic;
 
-namespace ConDuck
-{
-    public delegate void Routine();
-    public delegate Task AsyncRoutine();
-    public delegate int Waiter();
+namespace ConDuck;
 
-    public static class Delegates
-    {
-        public static Waiter GetIntervalWaiter(int amount, TimeUnit unit)
-        {
-            switch(unit)
-            {
-                case TimeUnit.MILLISECONDS:
-                    return () => amount;
-                case TimeUnit.SECONDS:
-                    return () => amount * 1000;
-                case TimeUnit.MINUTES:
-                    return () => amount * 60000;
-                case TimeUnit.HOURS:
-                    return () => amount * 3600000;
-                default:
-                    return () => amount;
-            }
-        }
-
-        public static Waiter GetTODWaiter(params (int, int)[] times)
-        {
-            var Index = 0;
-            var Times = new List<TimeOfDay>();
-            foreach((int hour, int minute) in times)
-            {
-                Times.Add(new TimeOfDay(hour, minute));
-            }
-            Times.Sort((fst, snd) => {
-                if (fst.TimeUntil() < snd.TimeUntil()) return -1;
-                else return 1;
-            });
-            return () => {
-                int time = Times[Index].TimeUntil();
-                Index = (Index + 1) % Times.Count;
-                return time;
-            };
-        }
-    }
-}
+public delegate void Routine();
+public delegate Task AsyncRoutine();
+public delegate int Waiter();

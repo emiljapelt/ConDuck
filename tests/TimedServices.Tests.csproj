@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Chroniker.csproj" />
+    <ProjectReference Include="..\src\ConDuck.csproj" />
   </ItemGroup>
 
 </Project>

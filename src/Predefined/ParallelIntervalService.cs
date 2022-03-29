@@ -1,18 +1,17 @@
 
-namespace ConDuck
-{
-    public class ParallelIntervalService : TimedService
-    {
-        public ParallelIntervalService(int pauseTime)
-        {
-            PostWaiter = Delegates.GetIntervalWaiter(pauseTime, TimeUnit.MILLISECONDS);
-            Executor = new ParallelExecutor();
-        }
+namespace ConDuck;
 
-        public ParallelIntervalService(int pauseTime, TimeUnit unit)
-        {
-            PostWaiter = Delegates.GetIntervalWaiter(pauseTime, unit);
-            Executor = new ParallelExecutor();
-        }
+public class ParallelIntervalService : TimedService
+{
+    public ParallelIntervalService(int pauseTime)
+    {
+        PostWaiter = WaiterGallery.GetIntervalWaiter(pauseTime, TimeUnit.MILLISECONDS);
+        Executor = new ParallelExecutor();
+    }
+
+    public ParallelIntervalService(int pauseTime, TimeUnit unit)
+    {
+        PostWaiter = WaiterGallery.GetIntervalWaiter(pauseTime, unit);
+        Executor = new ParallelExecutor();
     }
 }
