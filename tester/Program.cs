@@ -1,17 +1,8 @@
 ﻿
 using ConDuck;
 
-var service = new CustomTimedService(
-    () => 1000,
-    new ParallelExecutor(),
-    null
-);
+var task = TimedExecution.ExecuteIn(2, TimeUnit.HOURS, () => {
+    Console.WriteLine("Take the meat of the grill!");
+});
 
-service.AddRoutine(() => System.Console.WriteLine("1"));
-service.AddRoutine(async () => await Task.Run(() => {Thread.Sleep(2000); System.Console.WriteLine("2");}));
-service.AddRoutine(() => System.Console.WriteLine("3"));
-
-System.Console.WriteLine("Starting");
-service.StartService();
-
-while(true);
+while(!task.IsCompleted);

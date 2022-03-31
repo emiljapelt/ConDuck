@@ -5,8 +5,8 @@ public abstract class TimedService
 {
     private Thread Service;
     private bool Halt;
-    protected Waiter PreWaiter = WaiterGallery.GetIntervalWaiter(0, TimeUnit.MILLISECONDS);
-    protected Waiter PostWaiter = WaiterGallery.GetIntervalWaiter(0, TimeUnit.MILLISECONDS);
+    protected Waiter PreWaiter = WaiterGallery.GetIntervalWaiter(0);
+    protected Waiter PostWaiter = WaiterGallery.GetIntervalWaiter(0);
     protected Executor Executor;
 
     public void StartService()
@@ -23,7 +23,7 @@ public abstract class TimedService
         Halt = true;
     }
 
-    public async Task RunOnce()
+    public async Task ExecuteOnce()
     {
         await Executor.Execute();
     }
@@ -50,7 +50,9 @@ public abstract class TimedService
         while(!Halt)
         {
             Thread.Sleep(PreWaiter());
+            if (Halt) break;
             await Executor.Execute();
+            if (Halt) break;
             Thread.Sleep(PostWaiter());
         }
     }

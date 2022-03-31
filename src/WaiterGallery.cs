@@ -3,7 +3,7 @@ namespace ConDuck;
 
 public static class WaiterGallery 
 {
-    public static Waiter GetIntervalWaiter(int amount, TimeUnit unit)
+    public static Waiter GetIntervalWaiter(int amount, TimeUnit unit = TimeUnit.MILLISECONDS)
     {
         return () => TimeUnitMethods.ToMillieseconds(amount, unit);
     }
