@@ -78,17 +78,19 @@ public class TimeOfDay
         return base.Equals(obj);
     }
 
-    public int TimeUntil()
+    public int TimeUntil
     {
-        DateTime thisTod = DateTime.Today.AddHours(Hour).AddMinutes(Minute).AddSeconds(Second);
-        var diff = thisTod - DateTime.Now;
-        if (diff.TotalMilliseconds < 0) 
-        {
-            return (int) ((thisTod.AddDays(1)) - DateTime.Now).TotalMilliseconds;
-        }
-        else 
-        {
-            return (int) diff.TotalMilliseconds;
+        get {
+            DateTime thisTod = DateTime.Today.AddHours(Hour).AddMinutes(Minute).AddSeconds(Second);
+            var diff = thisTod - DateTime.Now;
+            if (diff.TotalMilliseconds < 0) 
+            {
+                return (int) ((thisTod.AddDays(1)) - DateTime.Now).TotalMilliseconds;
+            }
+            else 
+            {
+                return (int) diff.TotalMilliseconds;
+            }
         }
     }
 }

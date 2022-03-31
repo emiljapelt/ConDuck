@@ -11,15 +11,23 @@ public class ParallelExecutor : Executor
         Routines = new List<Delegate>();
     }
 
-    public override void AddRoutine(Delegate routine)
-    {
-        Routines.Add(routine);
-    }
+    public override void AddRoutine(Routine routine)
+    { Routines.Add(routine); }
+
+    public override void AddRoutine(AsyncRoutine routine)
+    { Routines.Add(routine); }
+
+    public override void AddRoutine(IRoutine routine)
+    { Routines.Add(routine.Execute); }
+
+    public override void AddRoutine(IAsyncRoutine routine)
+    { Routines.Add(routine.Execute); }
 
     public override async Task Execute()
     {
         await Task.Run(() => Parallel.ForEach(Routines, routine => {
-            routine.DynamicInvoke();
+            var result = routine.DynamicInvoke();
+            if (result is Task task) task.Wait();
         }));
     }
 }

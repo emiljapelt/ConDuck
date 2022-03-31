@@ -13,10 +13,20 @@ public static class TimedExecution
         return task;
     }
 
+    public static Task ExecuteIn(int amount, Delegate routine)
+    {
+        Task task = new Task(() => {
+            Thread.Sleep(amount);
+            routine.DynamicInvoke();
+        });
+        task.Start();
+        return task;
+    }
+
     public static Task ExecuteAt(TimeOfDay tod, Delegate routine)
     {
         Task task = new Task(() => {
-            Thread.Sleep(tod.TimeUntil());
+            Thread.Sleep(tod.TimeUntil);
             routine.DynamicInvoke();
         });
         task.Start();

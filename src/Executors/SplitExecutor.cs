@@ -14,15 +14,17 @@ public class SplitExecutor : Executor
         AsyncRoutines = new List<AsyncRoutine>();
     }
 
-    public override void AddRoutine(Delegate routine)
-    {
-        if (routine is AsyncRoutine) {
-            AsyncRoutines.Add((AsyncRoutine) routine);
-        }
-        else if (routine is Routine) {
-            Routines.Add((Routine) routine);
-        }
-    }
+    public override void AddRoutine(Routine routine)
+    { Routines.Add(routine); }
+
+    public override void AddRoutine(AsyncRoutine routine)
+    { AsyncRoutines.Add(routine); }
+
+    public override void AddRoutine(IRoutine routine)
+    { Routines.Add(routine.Execute); }
+
+    public override void AddRoutine(IAsyncRoutine routine)
+    { AsyncRoutines.Add(routine.Execute); }
 
     public override async Task Execute()
     {
