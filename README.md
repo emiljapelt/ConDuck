@@ -1,6 +1,6 @@
 # ConDuck
  
-ConDuck (A funky mixup of the word 'Conduct') is a library for controlling the time of execution in C#. It gives some predefined classes, but does also allow for customization. 
+ConDuck (A funky mixup of the word 'Conduct') is a library for scheduling the time of executions in C#. It gives some predefined classes, but does also allow for customization. 
 
 The following is an example of a piece of code, which everyday both at 08:30 and at 18:45, remindes the user to do something and then tells the user a joke.
 

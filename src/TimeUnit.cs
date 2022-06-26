@@ -28,4 +28,14 @@ public static class TimeUnitMethods
                 return amount;
         }
     }
+
+    public static int ToMillieseconds(params (int, TimeUnit)[] amounts)
+    {
+        var accumulator = 0;
+        foreach(var (time, unit) in amounts)
+        {
+            accumulator += ToMillieseconds(time, unit);
+        }
+        return accumulator;
+    }
 }

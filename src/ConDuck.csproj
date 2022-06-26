@@ -4,6 +4,14 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <PackageId>ConDuck</PackageId>
+    <Version>0.1.0</Version>
+    <Author>Emil Jäpelt</Author>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>
+      A library for scheduling the time of executions in C#.
+    </Description>
+    <PackageTags>Scheduling;</PackageTags>
   </PropertyGroup>
 
 </Project>
