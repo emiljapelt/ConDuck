@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConDuck", "src\ConDuck.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimedServices.Tests", "tests\TimedServices.Tests.csproj", "{5CFDA56D-B457-4949-9DE9-14A3AEAE1D68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tester", "tester\tester.csproj", "{3F8C1F59-685F-4D5E-B58B-788F14702841}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sandbox", "sandbox\sandbox.csproj", "{E8F6CAD6-390A-424A-8AC4-9A90C3E382C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,13 @@ Global
 		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F8C1F59-685F-4D5E-B58B-788F14702841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C11C70-84C1-4687-989E-3B77501C8605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C11C70-84C1-4687-989E-3B77501C8605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C11C70-84C1-4687-989E-3B77501C8605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C11C70-84C1-4687-989E-3B77501C8605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F6CAD6-390A-424A-8AC4-9A90C3E382C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F6CAD6-390A-424A-8AC4-9A90C3E382C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F6CAD6-390A-424A-8AC4-9A90C3E382C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F6CAD6-390A-424A-8AC4-9A90C3E382C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
